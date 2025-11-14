@@ -21,7 +21,8 @@ Solutions : Ajouter un sleep dans le docker-compose.yml pour attendre MySQL 
 Explication : Flask démarre avant que MySQL soit prêt.
 
 <h3>Hub docker :</h3>
-* https://hub.docker.com/r/wilmew/tp-networks-app
+-> https://hub.docker.com/r/wilmew/tp-networks-app
+
 
 
 
