@@ -1,0 +1,38 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: appdb
+    networks:
+      - backend_net
+    expose:
+      - "3306"
+
+  app:
+    build: ./app
+    container_name: app
+    networks:
+      - backend_net
+    depends_on:
+      - db
+    expose:
+      - "5000"
+
+  proxy:
+    image: nginx:alpine
+    container_name: proxy
+    ports:
+      - "8080:80"
+    volumes:
+      - ./proxy/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - frontend_net
+      - backend_net
+    depends_on:
+      - app
+
+networks:
+  frontend_net:
+  backend_net:
