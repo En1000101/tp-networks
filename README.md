@@ -1,4 +1,4 @@
-**Vérification du bon fonctionnement :**
+<h2> Vérification du bon fonctionnement : </h2>
 
 Depuis l'hôte en passsant par le proxy :
 -> Curl [IP_Conteneur_Proxy]:80/health ->
@@ -22,6 +22,7 @@ Explication : Flask démarre avant que MySQL soit prêt.
 
 <h3>Hub docker :</h3>
 -> https://hub.docker.com/r/wilmew/tp-networks-app
+
 
 
 
