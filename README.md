@@ -20,6 +20,8 @@ Explication : PyMySQL ne supporte pas nativement le plugin par défaut de MySQL 
 Solutions : Ajouter un sleep dans le docker-compose.yml pour attendre MySQL (command: sh -c "sleep 15 && python app.py")
 Explication : Flask démarre avant que MySQL soit prêt.
 
-hub docker : https://hub.docker.com/r/wilmew/tp-networks-app
+**Hub docker :**
+* https://hub.docker.com/r/wilmew/tp-networks-app
+
 
 
